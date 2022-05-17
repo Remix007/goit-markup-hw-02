@@ -4,6 +4,7 @@ theme color  #F5F4FA;
 second theme color  #2F303A;
 text color  #212121
 second text color #757575;
+color button #188CE8
 */
 :root {
     --text-color: #212121;
@@ -12,6 +13,7 @@ second text color #757575;
     --main-color: #FFFFFF;
     --theme-color: #F5F4FA;
     --second-theme-color: #2F303A;
+    --color-button: #188CE8;
 }
 
 body {
@@ -63,6 +65,8 @@ body {
     color: var(--accent-color);
 }
 
+
+
 /*banner*/
 
 .banner {
@@ -79,8 +83,10 @@ body {
     color: var(--main-color);
 }
 
-.banner-button {
+.banner-button,
+.banner-button:focus {
     background-color: var(--accent-color);
+    color: var(--main-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -89,8 +95,14 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
-    color: var(--main-color);
+    
+
 }
+.banner-button:hover {
+color: var(--main-color);
+background-color: var(--color-button)
+}
+
 
 /*main*/
 
@@ -133,11 +145,11 @@ body {
 /*buttons*/
 
 .project-button:focus,
-.project-button:hover,
-{
-background-color: var(--accent-color);
-color: var(--main-color);
+.project-button:hover {
+    background-color: var(--accent-color);
+    color: var(--main-color);
 }
+
 
 .project-button {
     background-color: var(--theme-color);
@@ -149,10 +161,11 @@ color: var(--main-color);
     cursor: pointer;
 }
 
-.project-button.active {
+.project-button .active {
     background-color: var(--accent-color);
     color: var(--main-color);
 }
+
 /*project-list*/
 
 .project-title {
@@ -160,7 +173,7 @@ color: var(--main-color);
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--second-text-color);
+    color: var(--text-color)
 }
 
 .project-text {
@@ -176,8 +189,7 @@ color: var(--main-color);
 
 .link {
     text-decoration: none;
-    
-    /*color: var(--text-color).*/
+
 }
 
 .section-title {
